@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  "tag": {
+    "text": "prototype"
+  },
+  "html": "This is a prototype of a new service."
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Success
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            Bank details updated.
+          </h3>
+        </div>
+      </div>
+
+      <h1 class="govuk-heading-l">Home</h1>
+
+      <h2 class="govuk-heading-m">There are 9 cases outstanding</h2>
+
+      {{ govukButton({
+        text: "View outstanding cases",
+        href: "outstanding-awacs-success"
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Start a new case</h2>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "mark-richards"
+      }) }}
+
+        </div>
+
+       </div>
+
+
+{% endblock %}

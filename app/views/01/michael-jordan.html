@@ -1,0 +1,302 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  "tag": {
+    "text": "prototype"
+  },
+  "html": "This is a prototype of a new service."
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+
+     <form action="unhappy-path" method="post" novalidate>
+
+     <h1 class="govuk-heading-l">
+       Michael Jordan
+       <span class="govuk-caption-l">BB 11 22 33 B</span>
+     </h1>
+
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Case details
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Customer history
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">Case details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          23/03/2021
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AA
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reason
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Out of scope
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Current bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "112233"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "192834628281"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">New bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "224356"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "87465223"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "A12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="case-updated">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Has the case been updated?
+      </h3>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="case-updated" name="case-updated" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="case-updated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="case-updated-2" name="case-updated" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="case-updated-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+{{ govukButton({
+  text: "Continue",
+  href: "add-a-response"
+}) }}
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Customer history</h2>
+    <h2 class="govuk-heading-m">01/01/20</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">Closed</strong>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AWAC updated
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ESA
+        </dd>
+      </div>
+    </dl>
+
+     <p><a class="govuk-link" href="#">View more</a></p>
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     <h2 class="govuk-heading-m">29/07/19</h2>
+
+     <dl class="govuk-summary-list">
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Status
+         </dt>
+         <dd class="govuk-summary-list__value">
+           <strong class="govuk-tag govuk-tag--green">Closed</strong>
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Response
+         </dt>
+         <dd class="govuk-summary-list__value">
+           AWAC updated
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Benefit type
+         </dt>
+         <dd class="govuk-summary-list__value">
+           ESA
+         </dd>
+       </div>
+     </dl>
+
+      <p><a class="govuk-link" href="#">View more</a></p>
+
+  </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="notes">
+    <h2 class="govuk-heading-l">Notes</h2>
+
+    <h3 class="govuk-heading-m">There are currently no notes on this case</h3>
+
+
+    {{ govukTextarea({
+      name: "notes",
+      id: "notes",
+      label: {
+        text: "Add a note",
+        classes: "govuk-label--s"
+      }
+    }) }}
+
+    {{ govukButton({
+      text: "Add note"
+    }) }}
+
+
+  </div>
+</div>
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}
