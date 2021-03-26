@@ -25,6 +25,8 @@ Advice of wrong account for credit
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-full">
 
+     <form action="unhappy-path" method="post" novalidate>
+
      <h1 class="govuk-heading-l">
        Michael Jordan
        <span class="govuk-caption-l">BB 11 22 33 B</span>
@@ -38,7 +40,7 @@ Advice of wrong account for credit
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
       <a class="govuk-tabs__tab" href="#past-day">
-        User
+        Case details
       </a>
     </li>
     <li class="govuk-tabs__list-item">
@@ -46,27 +48,11 @@ Advice of wrong account for credit
         Customer history
       </a>
     </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#notes">
-        Notes
-      </a>
-    </li>
   </ul>
   <div class="govuk-tabs__panel" id="past-day">
     <h2 class="govuk-heading-l">Case details</h2>
-    {{ govukWarningText({
-      text: "National search required - enter checkbrick",
-      iconFallbackText: "Warning"
-    }) }}
+
     <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          User
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Alby Atkinson
-        </dd>
-      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Date
@@ -85,12 +71,10 @@ Advice of wrong account for credit
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Status
+          Reason
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--red">
-            Urgent
-          </strong>
+          Out of scope
         </dd>
       </div>
     </dl>
@@ -193,14 +177,35 @@ Advice of wrong account for credit
       ]
     }) }}
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "Add response and close case",
-        href: "add-a-response-outstanding"
-      }) }}
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="case-updated">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Has the case been updated?
+      </h3>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="case-updated" name="case-updated" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="case-updated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="case-updated-2" name="case-updated" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="case-updated-2">
+          No
+        </label>
+      </div>
     </div>
 
-  <p><a href="#" class="govuk-link">Reallocate this case</a></p>
+  </fieldset>
+</div>
+
+{{ govukButton({
+  text: "Continue",
+  href: "add-a-response"
+}) }}
 
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
@@ -293,6 +298,8 @@ Advice of wrong account for credit
 
   </div>
 </div>
+
+</form>
 
 </div>
 </div>
