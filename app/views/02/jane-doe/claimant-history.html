@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Manage redirected payments",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container hide-crown"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Jane Doe</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>NINO:</dt>
+        <dd>XX 12 33 44 A</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+
+     <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+  <ul class="moj-sub-navigation__list">
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" href="case-details">Case details</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" aria-current="page" href="claimant-history">Claimant history</a>
+    </li>
+
+</nav>
+
+    <h2 class="govuk-heading-l">Claimant history</h2>
+    <h2 class="govuk-heading-m">01/01/20</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AWAC updated
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Carer's allowance
+        </dd>
+      </div>
+    </dl>
+
+     <p><a class="govuk-link" href="#">View more</a></p>
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     <h2 class="govuk-heading-m">29/07/19</h2>
+
+     <dl class="govuk-summary-list">
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Response
+         </dt>
+         <dd class="govuk-summary-list__value">
+           AWAC updated
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Benefit type
+         </dt>
+         <dd class="govuk-summary-list__value">
+           Carer's allowance
+         </dd>
+       </div>
+     </dl>
+
+      <p><a class="govuk-link" href="#">View more</a></p>
+
+  </div>
+
+  </div>
+
+{% endblock %}

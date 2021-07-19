@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+<header class="moj-header" role="banner">
+
+<div class="moj-header__container">
+
+  <div class="moj-header__logo">
+    <a class="moj-header__link moj-header__link--organisation-name" href="#">Manage redirected payments</a>
+
+    <a class="moj-header__link moj-header__link--service-name" href="#">Team leader</a>
+  </div>
+
+</div>
+
+</header>
+
+  <div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="management-information">Management information</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="manage-team">Manage team</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" aria-current="page"  href="tasks">Tasks</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">Tasks</h1>
+
+    <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <caption class="govuk-table__caption govuk-table__caption--m">There are 42 tasks to complete</caption>
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Tasks</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Attendance Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">10</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="jane-doe/case-details">Start task</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Carer's Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Start task</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Disability Living Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Start task</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Employment and Support Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Start task</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Income Support</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Start task</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Jobseeker's Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Start task</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{{ govukButton({
+text: "Search completed tasks",
+href: "#"
+}) }}
+
+  </div>
+</div>
+
+
+{% endblock %}

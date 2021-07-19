@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Manage redirected payments",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container hide-crown"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Jane Doe</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>NINO:</dt>
+        <dd>XX 12 33 44 A</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+
+     <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+  <ul class="moj-sub-navigation__list">
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" aria-current="page" href="case-details">Case details</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" href="claimant-history">Claimant history</a>
+    </li>
+
+</nav>
+
+    <h2 class="govuk-heading-l">Case details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          23/03/2021
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Carer's allowance
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reason
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Failed bank validation
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Current bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "112233"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "192834628281"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">New bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "224356"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "87465223"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "A12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Has the case been updated?
+      </h3>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+{{ govukButton({
+  text: "Continue",
+  href: "home-success"
+}) }}
+
+  </div>
+
+
+  </div>
+
+{% endblock %}

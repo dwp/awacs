@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+<header class="moj-header" role="banner">
+
+<div class="moj-header__container">
+
+  <div class="moj-header__logo">
+    <a class="moj-header__link moj-header__link--organisation-name" href="#">Manage redirected payments</a>
+
+    <a class="moj-header__link moj-header__link--service-name" href="#">Team leader</a>
+  </div>
+
+</div>
+
+</header>
+
+  <div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="management-information">Management information</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" aria-current="page" href="manage-team">Manage team</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link"  href="tasks">Tasks</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="moj-page-header-actions">
+
+  <div class="moj-page-header-actions__title">
+    <h1 class="govuk-heading-l">
+      <h1 class="govuk-heading-l">Manage team</h1>
+    </h1>
+  </div>
+
+  <div class="moj-page-header-actions__actions">
+
+    <div class="moj-button-menu">
+      <div class="moj-button-menu__wrapper">
+
+
+        <a href="add-new-user" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">
+          Add new user
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+    <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <caption class="govuk-table__caption govuk-table__caption--m">There are 6 users on your team</caption>
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Name</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Bobbi Bell</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Edit</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Jakob Cooper</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Edit</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Lili Stephenson</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="jane-doe/case-details">Edit</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Shaqib Mahmood</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Edit</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Susanna Hyde</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Edit</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Sylvia Bernard</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href=#">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+
+
+{% endblock %}
