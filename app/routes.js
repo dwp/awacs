@@ -1,20 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
-
-router.post('/unhappy-path', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  const caseUpdated = req.session.data['case-updated']
-
-  if (caseUpdated === 'no') {
-    res.redirect('/add-a-response')
-  } else {
-    res.redirect('/docs/examples/branching/over-18')
-  }
-})
+// Validation routing depending on sort code that's entered
+router.use('/01', require('./views/01/_routes'));
+router.use('/02', require('./views/02/_routes'));
 
 module.exports = router

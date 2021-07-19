@@ -22,6 +22,11 @@ Advice of wrong account for credit
   "html": "This is a prototype of a new service."
 }) }}
 
+{{ govukBackLink({
+  text: "Back",
+  href: "home"
+}) }}
+
 {% endblock %}
 
 {% block content %}
@@ -29,18 +34,21 @@ Advice of wrong account for credit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <form action="search" method="post">
+
     <h1 class="govuk-heading-l">Search for a completed task</h1>
 
     <div class="govuk-form-group">
-  <label class="govuk-label" for="width-10">
-    National Insurance number
-  </label>
-  <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"></div>
+      <label class="govuk-label" for="width-10">
+        National Insurance number
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"></div>
 
   {{ govukButton({
-    text: "Search",
-    href: "#"
+    text: "Search"
   }) }}
+
+  </form>
 
   </div>
 

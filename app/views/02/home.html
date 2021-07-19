@@ -27,9 +27,9 @@ Advice of wrong account for credit
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-three-quarters">
 
-<h1 class="govuk-heading-l">Tasks</h1>
+    <h1 class="govuk-heading-l">Tasks</h1>
 
     <table class="govuk-table">
   <thead class="govuk-table__head">
@@ -54,9 +54,11 @@ Advice of wrong account for credit
   </tbody>
 </table>
 
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
 {{ govukButton({
-text: "Search completed tasks",
-href: "#"
+  text: "Search completed tasks",
+  href: "search"
 }) }}
 
   </div>
