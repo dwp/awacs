@@ -35,10 +35,8 @@ router.post('/anita-nalini/completed-no', function (req, res) {
 
   router.post('/jane-doe/completed-no', function (req, res) {
 
-      // Make a variable and give it the value from 'juggling-balls'
       var taskCompleted = req.session.data['task-completed']
 
-      // Check whether the variable matches a condition
       if (taskCompleted == "no"){
         // Send user to next page
         res.redirect('response')

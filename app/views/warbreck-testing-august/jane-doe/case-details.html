@@ -40,10 +40,10 @@ Advice of wrong account for credit
 
 {% block content %}
 
+ <form action="completed-no" method="post">
+
 <div class="govuk-grid-row">
    <div class="govuk-grid-column-full">
-
-     <form action="completed-no" method="post">
 
      <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
@@ -218,11 +218,15 @@ Advice of wrong account for credit
   </fieldset>
 </div>
 
-{{ govukButton({
-  text: "Continue",
-  href: "home-success"
-}) }}
 
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</div>
+
+
+</div>
 </form>
 
   </div>
@@ -241,17 +245,17 @@ Advice of wrong account for credit
         <h2 class="govuk-visually-hidden">Support links</h2>
         <ul class="govuk-footer__inline-list">
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="../home">
+            <a class="govuk-footer__link" href="home">
               Jane Doe journey
             </a>
           </li>
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="anita-nalini/home">
+            <a class="govuk-footer__link" href="home-success">
               Anita Nalini journey
             </a>
           </li>
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="../home">
+            <a class="govuk-footer__link" href="../anita-nalini/home-success">
               Mark Jones journey
             </a>
           </li>
