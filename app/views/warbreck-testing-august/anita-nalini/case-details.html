@@ -68,7 +68,7 @@ Advice of wrong account for credit
           Date
         </dt>
         <dd class="govuk-summary-list__value">
-          23/03/2021
+          03/08/2021
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -77,14 +77,6 @@ Advice of wrong account for credit
         </dt>
         <dd class="govuk-summary-list__value">
           Attendance Allowance
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Reason
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Failed bank validation
         </dd>
       </div>
     </dl>
@@ -212,9 +204,17 @@ Advice of wrong account for credit
   </fieldset>
 </div>
 
-{{ govukButton({
-  text: "Continue"
-}) }}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  {{ govukButton({
+    text: "Pause task",
+    classes: "govuk-button--secondary",
+    href: "pause-task"
+  }) }}
+</div>
 
   </div>
 

@@ -7,11 +7,10 @@ router.post('/search', function (req, res) {
 
   let searchNino = req.session.data['search']
 
-  if (searchNino === 'AA112233B') {
-    res.redirect('mark-jones/claimant-history')
+  if (searchNino === 'CC332211B') {
+    res.redirect('search-results')
   }
-
-  else if (searchNino === 'BB112233C') {
+  else if (searchNino === 'CC 33 22 11 B') {
     res.redirect('search-results')
   }
 })
