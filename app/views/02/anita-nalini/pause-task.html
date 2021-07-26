@@ -5,31 +5,15 @@ Advice of wrong account for credit
 {% endblock %}
 
 {% block header %}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Manage redirected payments",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container hide-crown"
-  }) }}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Manage redirected payments",
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container hide-crown"
+}) }}
 {% endblock %}
 
 {% block beforeContent %}
-
-<section class="key-details-bar" role="contentinfo" aria-label="Key details">
-  <dl class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="key-details-bar__name">Anita Nalini</dd>
-    </div>
-
-    <div class="key-details-bar__bottom-block">
-      <span class="key-details-bar__wrapper">
-        <dt>NINO:</dt>
-        <dd>CC 33 22 11 B</dd>
-      </span>
-    </div>
-  </dl>
-</section>
 
 {{ govukBackLink({
   text: "Back",
@@ -40,52 +24,17 @@ Advice of wrong account for credit
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<h1 class="govuk-heading-l">
+  Pause task
+</h1>
 
-<div class="govuk-grid-column-full">
-     <nav class="moj-sub-navigation" aria-label="Sub navigation">
+<p class="govuk-body">If you pause the task, </p>
 
-  <ul class="moj-sub-navigation__list">
-    <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" href="case-details">Task details</a>
-    </li>
+{{ govukButton({
+  text: "Pause task",
+  href: "home-paused"
+}) }}
 
-    <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" aria-current="page" href="claimant-history">Claimant history</a>
-    </li>
-
-</nav>
-</div>
-<div class="govuk-grid-column-three-quarters">
-
-    <h2 class="govuk-heading-l">Claimant history</h2>
-    <h2 class="govuk-heading-m">27 July 2020</h2>
-
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Response
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Old account details differ
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Benefit type
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Attendance Allowance
-        </dd>
-      </div>
-    </dl>
-
-     <p><a class="govuk-link" href="#">View more</a></p>
-
-
-  </div>
-
-  </div>
 
 {% endblock %}
 
