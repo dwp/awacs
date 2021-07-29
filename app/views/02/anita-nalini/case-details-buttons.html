@@ -11,8 +11,6 @@ Advice of wrong account for credit
   serviceUrl: "/",
   containerClasses: "govuk-width-container hide-crown"
 }) }}
-
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,16 +20,13 @@ Advice of wrong account for credit
     <div class="key-details-bar__top-block">
       <dt class="govuk-visually-hidden">Name:</dt>
       <dd class="key-details-bar__name">Anita Nalini</dd>
-
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="key-details-bar__nino"></dd>
-
     </div>
 
     <div class="key-details-bar__bottom-block">
-      <dt>NINO:</dt>
-      <dd>CC 33 22 11 B</dd>
-
+      <span class="key-details-bar__wrapper">
+        <dt>NINO:</dt>
+        <dd>CC 33 22 11 B</dd>
+      </span>
     </div>
   </dl>
 </section>
@@ -47,8 +42,6 @@ Advice of wrong account for credit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <form action="completed-no" method="post">
 
       <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
@@ -67,10 +60,6 @@ Advice of wrong account for credit
       <div class="govuk-grid-column-three-quarters">
         <h2 class="govuk-heading-l">Task details</h2>
 
-        <strong class="govuk-tag">on hold</strong>
-
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
-
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -79,30 +68,13 @@ Advice of wrong account for credit
             <dd class="govuk-summary-list__value">
               03/08/2021
             </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Benefit
             </dt>
             <dd class="govuk-summary-list__value">
-              Attendance Allowance
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Response
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Ask for team leader help
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="response-paused">
-                Change<span class="govuk-visually-hidden"> response</span>
-              </a>
+              Carer's Allowance
             </dd>
           </div>
         </dl>
@@ -205,6 +177,17 @@ Advice of wrong account for credit
           ]
         }) }}
 
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Update task",
+          href: "response-buttons"
+        }) }}
+
+        {{ govukButton({
+          text: "Pause task",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
 
       </div>
 
