@@ -22,11 +22,24 @@ Advice of wrong account for credit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
 
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Task updated
+    </h3>
+  </div>
+</div>
+
     <h1 class="govuk-heading-l">Tasks</h1>
 
     <table class="govuk-table">
   <thead class="govuk-table__head">
-    <caption class="govuk-table__caption govuk-table__caption--m">The team have 20 tasks to complete</caption>
+    <caption class="govuk-table__caption govuk-table__caption--m">There are 22 tasks to complete</caption>
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Tasks</th>
@@ -35,34 +48,29 @@ Advice of wrong account for credit
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Attendance Allowance</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
-    </tr>
-    <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Bereavement Benefit</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="anita-nalini/case-details">Start task</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Employment and Support Allowance</th>
       <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="jane-doe/case-details">Start task</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Income Support</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="anita-nalini/case-details">Start task</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Jobseeker's Allowance</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">9</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="anita-nalini/case-details">Start task</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">State Pension</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details">Start task</a></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="anita-nalini/case-details">Start task</a></td>
     </tr>
   </tbody>
 </table>
@@ -70,8 +78,8 @@ Advice of wrong account for credit
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
 {{ govukButton({
-  text: "Search tasks",
-  href: "search"
+  text: "Search completed tasks",
+  href: "../search"
 }) }}
 
   </div>
@@ -96,6 +104,11 @@ Advice of wrong account for credit
           <li class="govuk-footer__inline-list-item">
             <a class="govuk-footer__link" href="home">
               Anita Nalini journey
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="../home">
+              Mark Jones journey
             </a>
           </li>
         </ul>

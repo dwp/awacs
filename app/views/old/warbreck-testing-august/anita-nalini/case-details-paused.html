@@ -11,25 +11,32 @@ Advice of wrong account for credit
     serviceUrl: "/",
     containerClasses: "govuk-width-container hide-crown"
   }) }}
+
+
 {% endblock %}
 
 {% block beforeContent %}
 
 <section class="key-details-bar" role="contentinfo" aria-label="Key details">
-  <dl class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="key-details-bar__name">Anita Nalini</dd>
-    </div>
+    <dl class="key-details-bar__key-details">
+      <div class="key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="key-details-bar__name">Anita Nalini</dd>
 
-    <div class="key-details-bar__bottom-block">
-      <span class="key-details-bar__wrapper">
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="key-details-bar__nino"></dd>
+
+        <dt class="govuk-visually-hidden">Additional needs status:</dt>
+        <dd class="key-details-bar__status">On hold</dd>
+      </div>
+
+      <div class="key-details-bar__bottom-block">
         <dt>NINO:</dt>
         <dd>CC 33 22 11 B</dd>
-      </span>
-    </div>
-  </dl>
-</section>
+
+      </div>
+    </dl>
+  </section>
 
 {{ govukBackLink({
   text: "Back",
@@ -70,6 +77,8 @@ Advice of wrong account for credit
         <dd class="govuk-summary-list__value">
           03/08/2021
         </dd>
+        <dd class="govuk-summary-list__actions">
+    </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -78,6 +87,21 @@ Advice of wrong account for credit
         <dd class="govuk-summary-list__value">
           Attendance Allowance
         </dd>
+        <dd class="govuk-summary-list__actions">
+    </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Ask for team leader help
+        </dd>
+        <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="response-paused">
+        Change<span class="govuk-visually-hidden"> response</span>
+      </a>
+    </dd>
       </div>
     </dl>
 
@@ -179,20 +203,8 @@ Advice of wrong account for credit
       ]
     }) }}
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "Update task",
-        href: "response-buttons"
-      }) }}
 
-      {{ govukButton({
-        text: "Pause task",
-        classes: "govuk-button--secondary",
-        href: "home-paused"
-      }) }}
-    </div>
-
-  </div>
+</div>
 
 
   </div>

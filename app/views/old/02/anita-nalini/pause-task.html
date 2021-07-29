@@ -5,59 +5,35 @@ Advice of wrong account for credit
 {% endblock %}
 
 {% block header %}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Manage redirected payments",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container hide-crown"
-  }) }}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Manage redirected payments",
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container hide-crown"
+}) }}
 {% endblock %}
 
 {% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-home">
+<h1 class="govuk-heading-l">
+  Pause task
+</h1>
 
-    <h1 class="govuk-heading-l">Tasks</h1>
-
-    <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <caption class="govuk-table__caption govuk-table__caption--m">The team have 9 tasks to complete</caption>
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
-      <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Tasks</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Carer's Allowance</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start task</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Industrial Injuries Disablement Benefit <strong class="govuk-tag govuk-tag--red">
-  1 Urgent
-</strong></th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="jane-doe/case-details">Start task</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+<p class="govuk-body">If you pause the task, </p>
 
 {{ govukButton({
-  text: "Search tasks",
-  href: "search"
+  text: "Pause task",
+  href: "home-paused"
 }) }}
-
-  </div>
-</div>
 
 
 {% endblock %}
@@ -71,12 +47,12 @@ Advice of wrong account for credit
         <h2 class="govuk-visually-hidden">Support links</h2>
         <ul class="govuk-footer__inline-list">
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="home">
+            <a class="govuk-footer__link" href="../home">
               Jane Doe journey
             </a>
           </li>
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="jane-doe/home-success">
+            <a class="govuk-footer__link" href="home">
               Anita Nalini journey
             </a>
           </li>

@@ -41,159 +41,49 @@ Advice of wrong account for credit
 {% block content %}
 
 <div class="govuk-grid-row">
-   <div class="govuk-grid-column-full">
 
-     <form action="completed-no" method="post">
-
+<div class="govuk-grid-column-full">
      <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
   <ul class="moj-sub-navigation__list">
     <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" aria-current="page" href="case-details">Task details</a>
+      <a class="moj-sub-navigation__link" href="case-details">Task details</a>
     </li>
 
     <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" href="claimant-history">Claimant history</a>
+      <a class="moj-sub-navigation__link" aria-current="page" href="claimant-history">Claimant history</a>
     </li>
 
 </nav>
 </div>
-
 <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-l">Task details</h2>
+
+    <h2 class="govuk-heading-l">Claimant history</h2>
+    <h2 class="govuk-heading-m">27 July 2020</h2>
 
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Date
+          Response
         </dt>
         <dd class="govuk-summary-list__value">
-          03/08/2021
+          Old account details differ
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Benefit
+          Benefit type
         </dt>
         <dd class="govuk-summary-list__value">
-          Attendance Allowance
+          Carer's Allowance
         </dd>
       </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Current bank account details</h2>
+     <p><a class="govuk-link" href="#">View more</a></p>
 
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Sort code"
-          },
-          value: {
-            text: "112233"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Account number"
-          },
-          value: {
-            text: "12345678"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Roll number"
-          },
-          value: {
-            text: "192834628281"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        }
-      ]
-    }) }}
-
-    <h2 class="govuk-heading-m">New bank account details</h2>
-
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Sort code"
-          },
-          value: {
-            text: "224356"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Account number"
-          },
-          value: {
-            text: "87465223"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Roll number"
-          },
-          value: {
-            text: "A12345678"
-          },
-          actions: {
-            items: [
-              {
-              }
-            ]
-          }
-        }
-      ]
-    }) }}
-
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "Update task",
-        href: "response-buttons"
-      }) }}
-
-      {{ govukButton({
-        text: "Pause task",
-        classes: "govuk-button--secondary",
-        href: "home-paused"
-      }) }}
-    </div>
 
   </div>
-
 
   </div>
 

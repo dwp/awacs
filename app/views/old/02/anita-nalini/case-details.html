@@ -43,6 +43,8 @@ Advice of wrong account for credit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
+    <form action="completed-no" method="post">
+
       <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
         <ul class="moj-sub-navigation__list">
@@ -177,17 +179,37 @@ Advice of wrong account for credit
           ]
         }) }}
 
-      <div class="govuk-button-group">
-        {{ govukButton({
-          text: "Update task",
-          href: "response-buttons"
-        }) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                Have you updated the task?
+              </h3>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="task-completed" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="task-completed" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="no">
+                  No
+                </label>
+              </div>
+            </div>
 
-        {{ govukButton({
-          text: "Pause task",
-          classes: "govuk-button--secondary"
-        }) }}
-      </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </div>
 
       </div>
 
@@ -213,7 +235,7 @@ Advice of wrong account for credit
                 <a class="govuk-footer__link" href="home">
                   Anita Nalini journey
                 </a>
-              </li
+              </li>
             </ul>
 
             <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">

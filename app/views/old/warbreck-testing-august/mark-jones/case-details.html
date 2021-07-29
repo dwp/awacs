@@ -19,13 +19,13 @@ Advice of wrong account for credit
   <dl class="key-details-bar__key-details">
     <div class="key-details-bar__top-block">
       <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="key-details-bar__name">Anita Nalini</dd>
+      <dd class="key-details-bar__name">Mark Jones</dd>
     </div>
 
     <div class="key-details-bar__bottom-block">
       <span class="key-details-bar__wrapper">
         <dt>NINO:</dt>
-        <dd>CC 33 22 11 B</dd>
+        <dd>AA 12 33 44 B</dd>
       </span>
     </div>
   </dl>
@@ -41,26 +41,10 @@ Advice of wrong account for credit
 {% block content %}
 
 <div class="govuk-grid-row">
-   <div class="govuk-grid-column-full">
+   <div class="govuk-grid-column-three-quarters">
 
-     <form action="completed-no" method="post">
-
-     <nav class="moj-sub-navigation" aria-label="Sub navigation">
-
-  <ul class="moj-sub-navigation__list">
-    <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" aria-current="page" href="case-details">Task details</a>
-    </li>
-
-    <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link" href="claimant-history">Claimant history</a>
-    </li>
-
-</nav>
-</div>
-
-<div class="govuk-grid-column-three-quarters">
     <h2 class="govuk-heading-l">Task details</h2>
+
 
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -68,7 +52,9 @@ Advice of wrong account for credit
           Date
         </dt>
         <dd class="govuk-summary-list__value">
-          03/08/2021
+          11 March 2021
+        </dd>
+        <dd class="govuk-summary-list__actions">
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -76,8 +62,23 @@ Advice of wrong account for credit
           Benefit
         </dt>
         <dd class="govuk-summary-list__value">
-          Attendance Allowance
+          Jobseeker's Allowance
         </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Notepad only updated
+        </dd>
+        <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="response">
+        Change<span class="govuk-visually-hidden"> response</span>
+      </a>
+    </dd>
       </div>
     </dl>
 
@@ -179,19 +180,6 @@ Advice of wrong account for credit
       ]
     }) }}
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "Update task",
-        href: "response-buttons"
-      }) }}
-
-      {{ govukButton({
-        text: "Pause task",
-        classes: "govuk-button--secondary",
-        href: "home-paused"
-      }) }}
-    </div>
-
   </div>
 
 
@@ -213,8 +201,13 @@ Advice of wrong account for credit
             </a>
           </li>
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="home">
+            <a class="govuk-footer__link" href="../home">
               Anita Nalini journey
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="../home">
+              Mark Jones journey
             </a>
           </li>
         </ul>
