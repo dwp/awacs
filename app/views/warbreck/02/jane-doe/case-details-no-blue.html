@@ -1,7 +1,4 @@
-{% extends "layouts/warbreck/layout-case-details.html" %}
-
-{% set person_firstName = "Jane Doe" %}
-{% set person_theirNino = "XX 12 33 44 A" %}
+{% extends "layouts/warbreck/layout-search.html" %}
 
 {% block beforeContent %}
 
@@ -16,11 +13,18 @@
 
    <div class="govuk-grid-row">
 
+     <div class="govuk-grid-column-full">
+
+     <span class="govuk-caption-l">XX 12 33 44 A</span>
+     <h1 class="govuk-heading-xl">Jane Doe</h1>
+
+     </div>
+
      {% include "components/sub-nav/task-details.html" %}
 
 <div class="govuk-grid-column-full">
 
-    {% include "components/warbreck/task-details-list-jane-doe.html" %}
+    {% include "components/warbreck/task-details-list-jane-doe-no-blue.html" %}
 
     <div class="govuk-button-group">
       {{ govukButton({

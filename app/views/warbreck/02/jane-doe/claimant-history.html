@@ -1,8 +1,9 @@
-{% extends "layouts/warbreck/layout-search.html" %}
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "Jane Doe" %}
+{% set person_theirNino = "XX 12 33 44 A" %}
 
 {% block beforeContent %}
-
-{% include "components/key-details/jane-doe.html" %}
 
 {{ govukBackLink({
   text: "Back",
@@ -18,7 +19,7 @@
 
      {% include "components/sub-nav/claimant-history.html" %}
 
-<div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-column-full">
 
     <h2 class="govuk-heading-l">Claimant history</h2>
     <h2 class="govuk-heading-m">1 January 2020</h2>
