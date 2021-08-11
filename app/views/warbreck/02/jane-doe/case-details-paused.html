@@ -1,0 +1,35 @@
+{% extends "layouts/warbreck/layout-search.html" %}
+
+{% block beforeContent %}
+
+{% include "components/key-details/jane-doe.html" %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+     <form action="completed-no" method="post">
+
+       <div class="govuk-grid-row">
+
+     {% include "components/sub-nav/task-details-paused.html" %}
+
+<div class="govuk-grid-column-three-quarters">
+
+    {% include "components/warbreck/task-details-list-jane-doe.html" %}
+
+
+  {{ govukButton({
+    text: "Update task",
+    href: "response-paused"
+  }) }}
+
+  </div>
+
+
+{% endblock %}

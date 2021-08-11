@@ -1,0 +1,138 @@
+{% extends "layouts/warbreck/layout-search.html" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="moj-page-header-actions">
+
+  <div class="moj-page-header-actions__title">
+    <h1 class="govuk-heading-l">
+      <h1 class="govuk-heading-l">Tasks</h1>
+    </h1>
+  </div>
+
+  <div class="moj-page-header-actions__actions">
+
+    <div class="moj-button-menu">
+      <div class="moj-button-menu__wrapper">
+
+        <button class="govuk-button moj-button-menu__item govuk-button moj-page-header-actions__action" data-module="govuk-button">
+          Search for a NINO
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+    <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <caption class="govuk-table__caption govuk-table__caption--m">The team have 36 tasks to complete</caption>
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter">Tasks</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+    </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Attendance Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Bereavement Benefit</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Bereavement Support Payments</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Disability Living Allownce</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Employment and Support Allowance <strong class="govuk-tag govuk-tag--red" style="margin-left: 30px">1 Urgent</strong></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="jane-doe/case-details">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Income Support</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Jobseeker's Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">9</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Maternity Allowance</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">State Pension</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Support for Mortgage Interest</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+    </tr>
+    </tbody>
+    </table>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break">
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<caption class="govuk-table__caption govuk-table__caption--m">The team have 4 paused tasks</caption>
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">NINO</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Paused by</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">BB 99 33 22 B</th>
+  <td class="govuk-table__cell">Income Support</td>
+  <td class="govuk-table__cell">Sunil Dhoni</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">AB 87 56 32 C</th>
+  <td class="govuk-table__cell">Employment and Support Allowance</td>
+  <td class="govuk-table__cell">Daniel Hughes</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">CC 55 33 88 C</th>
+  <td class="govuk-table__cell">Jobseeker's Allowance</td>
+  <td class="govuk-table__cell">Jenny Mitchell</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">CA 22 33 44 C</th>
+  <td class="govuk-table__cell">Employment and Support Allowance</td>
+  <td class="govuk-table__cell">Daniel Hughes</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+</tbody>
+</table>
+
+
+{% endblock %}
