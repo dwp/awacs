@@ -1,0 +1,134 @@
+<h2 class="govuk-heading-l">Task details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name of account holder
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Cumbria Council
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      CC 33 22 11 B
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date received
+    </dt>
+    <dd class="govuk-summary-list__value">
+      03/08/2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Benefit type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Attendance Allowance
+    </dd>
+  </div>
+</dl>
+
+<h2 class="govuk-heading-m">Current bank account details</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Sort code"
+      },
+      value: {
+        text: "112233"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Account number"
+      },
+      value: {
+        text: "12345678"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Roll number"
+      },
+      value: {
+        text: "192834628281"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">New bank account details</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Sort code"
+      },
+      value: {
+        text: "224356"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Account number"
+      },
+      value: {
+        text: "87465223"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Roll number"
+      },
+      value: {
+        text: "A12345678"
+      },
+      actions: {
+        items: [
+          {
+          }
+        ]
+      }
+    }
+  ]
+}) }}

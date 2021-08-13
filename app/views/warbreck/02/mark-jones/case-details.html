@@ -1,24 +1,12 @@
-{% extends "layouts/warbreck/layout-case-details.html" %}
+{% extends "layouts/warbreck/layout-search-case-details.html" %}
 
 {% set person_firstName = "Mark Jones" %}
 {% set person_theirNino = "AA 11 22 33 B" %}
 
-{% block beforeContent %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
-
-{% endblock %}
-
 {% block content %}
-
- <form action="completed-no" method="post">
 
    <div class="govuk-grid-row">
 
-     {% include "components/sub-nav/task-details.html" %}
 
    <div class="govuk-grid-column-full">
 
@@ -28,10 +16,30 @@
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
+          Name of account holder
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mark Jones
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          NINO
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AA 11 22 33 B
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
           Last updated
         </dt>
         <dd class="govuk-summary-list__value">
-          3 August 2021
+          03/08/2021
         </dd>
         <dd class="govuk-summary-list__actions">
         </dd>
@@ -51,7 +59,7 @@
           Response
         </dt>
         <dd class="govuk-summary-list__value">
-          Old account details differ
+          Unable to update - BLS6 sent
         </dd>
         <dd class="govuk-summary-list__actions">
         </dd>

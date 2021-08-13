@@ -8,10 +8,10 @@ router.post('/search', function (req, res) {
   let searchNino = req.session.data['search']
 
   if (searchNino === 'AA112233B') {
-    res.redirect('search-results')
+    res.redirect('../search-results')
   }
   else if (searchNino === 'AA 11 22 33 B') {
-    res.redirect('search-results')
+    res.redirect('../search-results')
   }
 })
 

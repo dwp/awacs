@@ -1,0 +1,232 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Manage redirected payments",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container hide-crown"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Anita Nalini</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>NINO:</dt>
+        <dd>CC 33 22 11 B</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-full">
+
+     <form action="completed-no" method="post">
+
+     <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+  <ul class="moj-sub-navigation__list">
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" aria-current="page" href="case-details">Task details</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" href="claimant-history">Claimant history</a>
+    </li>
+
+</nav>
+</div>
+
+<div class="govuk-grid-column-three-quarters">
+    <h2 class="govuk-heading-l">Task details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          03/08/2021
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Attendance Allowance
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Current bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "112233"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "192834628281"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">New bank account details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "224356"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "87465223"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Roll number"
+          },
+          value: {
+            text: "A12345678"
+          },
+          actions: {
+            items: [
+              {
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Update task",
+        href: "response-buttons"
+      }) }}
+
+      {{ govukButton({
+        text: "Pause task",
+        classes: "govuk-button--secondary",
+        href: "#"
+      }) }}
+    </div>
+
+  </div>
+
+
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="../home">
+              Start again
+            </a>
+          </li>
+        </ul>
+
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% endblock %}

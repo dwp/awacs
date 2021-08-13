@@ -26,14 +26,27 @@
 
 </header>
 
-{% include "components/key-details/key-details.html" %}
+{% endblock %}
+
+{% block backButton %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<span class="govuk-caption-l">{{person_theirNino}}</span>
+<h1 class="govuk-heading-xl" style="margin-bottom: 10px">{{person_firstName}}</h1>
 
 {% endblock %}
 
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
 
 
 {% block service %}

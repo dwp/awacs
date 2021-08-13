@@ -1,26 +1,21 @@
 {% extends "layouts/warbreck/layout-case-details.html" %}
 
+
 {% set person_firstName = "Jane Doe" %}
 {% set person_theirNino = "XX 12 33 44 A" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_dateReceived = "30/07/2021" %}
 
-{% block beforeContent %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
-
-{% endblock %}
 
 {% block content %}
 
-   <div class="govuk-grid-row">
+<div class="govuk-grid-row">
 
-     {% include "components/sub-nav/task-details.html" %}
+  {% include "components/sub-nav/task-details.html" %}
 
 <div class="govuk-grid-column-full">
 
-    {% include "components/warbreck/task-details-list-jane-doe.html" %}
+ {% include "components/task-details/task-details-list.html" %}
 
     <div class="govuk-button-group">
       {{ govukButton({
@@ -31,7 +26,7 @@
       {{ govukButton({
         text: "Pause task",
         classes: "govuk-button--secondary",
-        href: "home-paused"
+        href: "home"
       }) }}
     </div>
 </div>

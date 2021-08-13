@@ -1,42 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layouts/warbreck/layout-case-details.html" %}
 
-{% block pageTitle %}
-Advice of wrong account for credit
-{% endblock %}
-
-{% block header %}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Manage redirected payments",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container hide-crown"
-  }) }}
-{% endblock %}
-
-{% block beforeContent %}
-
-<section class="key-details-bar" role="contentinfo" aria-label="Key details">
-  <dl class="key-details-bar__key-details">
-    <div class="key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="key-details-bar__name">Jane Doe</dd>
-    </div>
-
-    <div class="key-details-bar__bottom-block">
-      <span class="key-details-bar__wrapper">
-        <dt>NINO:</dt>
-        <dd>XX 12 33 44 A</dd>
-      </span>
-    </div>
-  </dl>
-</section>
-
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
-
-{% endblock %}
+{% set person_firstName = "Jane Doe" %}
+{% set person_theirNino = "XX 12 33 44 A" %}
 
 {% block content %}
 

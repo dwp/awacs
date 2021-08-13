@@ -2,15 +2,8 @@
 
 {% set person_firstName = "Jane Doe" %}
 {% set person_theirNino = "XX 12 33 44 A" %}
-
-{% block beforeContent %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
-
-{% endblock %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_dateReceived = "30/07/2021" %}
 
 {% block content %}
 
@@ -22,7 +15,7 @@
 
 <div class="govuk-grid-column-full">
 
-    {% include "components/warbreck/task-details-list-jane-doe.html" %}
+    {% include "components/task-details/task-details-list.html" %}
 
 
   {{ govukButton({
