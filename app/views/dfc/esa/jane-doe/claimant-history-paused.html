@@ -1,0 +1,69 @@
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "Jane Doe" %}
+{% set person_theirNino = "XX 12 33 44 A" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+     {% include "components/sub-nav/claimant-history-paused.html" %}
+
+<div class="govuk-grid-column-full">
+
+    <h2 class="govuk-heading-l">Claimant history</h2>
+    <h2 class="govuk-heading-m">1 January 2020</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AWAC updated
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Employment and Support Allowance
+        </dd>
+      </div>
+    </dl>
+
+     <p><a class="govuk-link" href="#">View more</a></p>
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     <h2 class="govuk-heading-m">29 July 2019</h2>
+
+     <dl class="govuk-summary-list">
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Response
+         </dt>
+         <dd class="govuk-summary-list__value">
+           AWAC updated
+         </dd>
+       </div>
+       <div class="govuk-summary-list__row">
+         <dt class="govuk-summary-list__key">
+           Benefit type
+         </dt>
+         <dd class="govuk-summary-list__value">
+           Employment and Support Allowance
+         </dd>
+       </div>
+     </dl>
+
+      <p><a class="govuk-link" href="#">View more</a></p>
+
+
+  </div>
+
+  </div>
+
+{% endblock %}
