@@ -1,0 +1,38 @@
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "Cumbria Council" %}
+{% set person_theirNino = "CC 33 22 11 B" %}
+{% set details_benefitType = "Carer's Allowance" %}
+{% set details_dateReceived = "19/08/2021" %}
+
+{% block content %}
+
+ <form action="completed-no" method="post">
+
+   <div class="govuk-grid-row">
+
+     {% include "components/sub-nav/task-details.html" %}
+
+<div class="govuk-grid-column-full">
+
+    {% include "components/task-details/task-details-list.html" %}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Close task",
+        href: "response"
+      }) }}
+
+      {{ govukButton({
+        text: "Pause task",
+        classes: "govuk-button--secondary",
+        href: "#"
+      }) }}
+    </div>
+
+  </div>
+
+
+  </div>
+
+{% endblock %}

@@ -47,7 +47,7 @@
           <div class="govuk-grid-column-one-third">
             <dl>
               <dt class="govuk-heading-s">Feature</dt>
-              <dd class="govuk-body">Iteration of initial design ideas</dd>
+              <dd class="govuk-body">Round 1 usability testing improvements</dd>
             </dl>
           </div>
 
@@ -60,7 +60,12 @@
         </div>
 
         <h3 class="govuk-heading-s">Changes</h3>
-        <p>N/A</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Added primary navigation bar</li>
+          <li>Separated outstanding tasks and paused tasks</li>
+          <li>Added example of 'Cumbria Council'</li>
+          <li>Updated content and components</li>
+        </ul>
 
         <h3 class="govuk-heading-s">Hypothesis</h3>
 
@@ -99,22 +104,39 @@
         <h3 class="govuk-heading-s">Research notes</h3>
         <p>Due to be added</p>
 
-        <h3 class="govuk-heading-s">Runcorn prototype</h3>
+        <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">Link</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Warbreck</td>
+      <td class="govuk-table__cell"><a href="/warbreck/02/home">View prototype</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Runcorn</td>
+      <td class="govuk-table__cell"><a href="/runcorn/02/home">View prototype</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DfC (Carer's Allowance)</td>
+      <td class="govuk-table__cell"><a href="/dfc/ca/home">View prototype</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DfC (State Pension)</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Still to come</strong></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DfC (Employment and Support Allowance)</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Still to come</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-        {{ govukButton({
-          text: "View prototype",
-          href: "/02/home"
-        }) }}
-
-        <h3 class="govuk-heading-s">Warbreck prototype</h3>
-
-        {{ govukButton({
-          text: "View prototype",
-          href: "/warbreck-testing-august/home"
-        }) }}
-
-        <h3 class="govuk-heading-s">Search completed tasks NINOs</h3>
-        <p>AA112233B - goes directly to claimant 'profile' page</p>
+        <h3 class="govuk-heading-s">Search NINO</h3>
+        <p>AA112233B</p>
 
       </div>
       {# End of prototype write up #}
@@ -122,7 +144,7 @@
     </div>
     {# End of most recent box #}
 
-    <h2 class="govuk-heading-l">Previous versions</h2>
+  <h2 class="govuk-heading-l">Previous versions</h2>
 
           {# Start of hidden panel #}
           <details class="govuk-details all-versions">
@@ -133,6 +155,91 @@
             </summary>
 
             <div class="govuk-details__text">
+
+              {# Start of prototype write up #}
+              <div class="prototype-write-up">
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <dl>
+                      <dt class="govuk-heading-s">Date of release</dt>
+                      <dd class="govuk-body">TBC</dd>
+                    </dl>
+                  </div>
+
+                  <div class="govuk-grid-column-one-third">
+                    <dl>
+                      <dt class="govuk-heading-s">Feature</dt>
+                      <dd class="govuk-body">Iteration of initial design ideas</dd>
+                    </dl>
+                  </div>
+
+                  <div class="govuk-grid-column-one-third">
+                    <dl>
+                      <dt class="govuk-heading-s">Related stories</dt>
+                      <dd class="govuk-body">TBC</dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <h3 class="govuk-heading-s">Changes</h3>
+                <p>N/A</p>
+
+                <h3 class="govuk-heading-s">Hypothesis</h3>
+
+                <p>We believe that having separate queues for benefits means that:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>people can see when they have tasks to do that they need someone else to do (because they don't have access)</li>
+                  <li>if a benefit system isn't working due to technical issues people can carry on working on tasks for other benefits</li>
+                  <li>people can do all tasks for one benefit as a group, they don't have to switch systems</li>
+                </ul>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that providing a search by NINO function allows agents to view historic records for management checks or find the information needed to answer enquiries</p>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that providing an edit option for the response on a historic record allows agents to update a task from not updated to updated or handed off when they have more information </p>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that having a overall count of the team tasks to be completed allows everyone to see when there is a period of high fluctuation and more people might be needed to help out</p>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that highlighting if there are tasks that approach 3 days - it will help people prioritise those benefits first</p>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that if I want to 'pause' a task (for example pass to team leader to do a bank validation check) the task will be 'closed' and the NINO passed to the team leader - the team leader can then pick up the task through a NINO search and update the response on the customer history page</p>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                <p>We believe that they might come up with their own ways to split tasks fairly between themselves and keep track of how many each person has done (e.g. tally on paper)</p>
+
+
+                <h3 class="govuk-heading-s">Research notes</h3>
+                <p>Due to be added</p>
+
+                <h3 class="govuk-heading-s">Runcorn prototype</h3>
+
+                {{ govukButton({
+                  text: "View prototype",
+                  href: "/02/home"
+                }) }}
+
+                <h3 class="govuk-heading-s">Warbreck prototype</h3>
+
+                {{ govukButton({
+                  text: "View prototype",
+                  href: "/warbreck-testing-august/home"
+                }) }}
+
+                <h3 class="govuk-heading-s">Search completed tasks NINOs</h3>
+                <p>AA112233B - goes directly to claimant 'profile' page</p>
+
+              </div>
+              {# End of prototype write up #}
 
               <div class="prototype-write-up">
                 <div class="govuk-grid-row">
