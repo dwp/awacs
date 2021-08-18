@@ -1,0 +1,26 @@
+{% extends "layouts/warbreck/layout-search.html" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  Add a response
+</h1>
+
+{% include "components/response-radios/radios-dfc.html" %}
+
+{{ govukButton({
+  text: "Submit",
+  href: "completed/home"
+}) }}
+
+
+{% endblock %}

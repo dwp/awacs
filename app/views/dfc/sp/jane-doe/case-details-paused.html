@@ -1,0 +1,29 @@
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "Jane Doe" %}
+{% set person_theirNino = "XX 12 33 44 A" %}
+{% set details_benefitType = "State Pension" %}
+{% set details_dateReceived = "18/08/2021" %}
+
+{% block content %}
+
+     <form action="completed-no" method="post">
+
+       <div class="govuk-grid-row">
+
+     {% include "components/sub-nav/task-details-paused.html" %}
+
+<div class="govuk-grid-column-full">
+
+    {% include "components/task-details/task-details-list.html" %}
+
+
+  {{ govukButton({
+    text: "Close task",
+    href: "response-paused"
+  }) }}
+
+  </div>
+
+
+{% endblock %}

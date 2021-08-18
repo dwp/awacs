@@ -1,0 +1,65 @@
+{% extends "layouts/warbreck/layout-search-nav-input-paused.html" %}
+
+{% set notification_outstandingTasks = "35" %}
+{% set notification_pausedTasks = "5" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">Paused tasks</h1>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<caption class="govuk-table__caption govuk-table__caption--m">The team have 5 paused tasks</caption>
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">NINO</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Paused by</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">BB 99 33 22 B</th>
+  <td class="govuk-table__cell">Disability Living Allowance</td>
+  <td class="govuk-table__cell">Sunil Dhoni</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">AB 87 56 32 C</th>
+  <td class="govuk-table__cell">Employment and Support Allowance</td>
+  <td class="govuk-table__cell">Mary Smith</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">CC 55 33 88 C</th>
+  <td class="govuk-table__cell">Jobseeker's Allowance</td>
+  <td class="govuk-table__cell">Jenny Mitchell</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">CA 22 33 44 C</th>
+  <td class="govuk-table__cell">Employment and Support Allowance</td>
+  <td class="govuk-table__cell">Mary Smith</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">XX 12 33 44 A</th>
+  <td class="govuk-table__cell">State Pension <strong class="govuk-tag govuk-tag--red" style="margin-left: 15px">Urgent</strong></td>
+  <td class="govuk-table__cell">Alex Hughes</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="case-details-paused">Update</a></td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Manage redirected payments",
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container hide-crown"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  Add a response
+</h1>
+
+{% include "components/response-radios/radios-dfc.html" %}
+
+{{ govukButton({
+  text: "Submit",
+  href: "home-success"
+}) }}
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "Cumbria Council" %}
+{% set person_theirNino = "CC 33 22 11 B" %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+     {% include "components/sub-nav/claimant-history.html" %}
+
+<div class="govuk-grid-column-full">
+
+    <h2 class="govuk-heading-l">Claimant history</h2>
+    <h2 class="govuk-heading-m">27 July 2020</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AWAC updated
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          State Pension
+        </dd>
+      </div>
+    </dl>
+
+     <p><a class="govuk-link" href="#">View more</a></p>
+
+
+  </div>
+
+  </div>
+
+{% endblock %}
